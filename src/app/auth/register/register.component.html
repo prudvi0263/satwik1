@@ -1,0 +1,44 @@
+<div id="id02" class="modal">
+  <div class="modal-content animate">
+ 
+    <div class="imgcontainer">
+      <span (click)="redirectToHomepage()" class="close" title="Close Modal">&times;</span>
+     <a class="satwik" href="#"> <img src="assets\img\Satwik_Symbol.png" alt="Avatar" class="avatar"></a>
+      <h4 class="text-danger" >SATWIK</h4>
+    </div>
+
+    <div class="container" [formGroup]="registerForm">
+      
+      <label for="uname"><b>FirstName</b></label>
+      <input type="text" placeholder="Enter Firstname" formControlName="firstName" name="uname">
+
+      <label for="uname"><b>LastName</b></label>
+      <input type="text" placeholder="Enter Lastname" formControlName="lastName" name="uname">
+
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" formControlName="email" name="uname">
+      <span *ngIf="registerForm.controls.email.hasError('alreadyRegistered')">
+        Email already registered
+      </span><br>
+
+      <label for="uname"><b>Mobile</b></label>
+      <input type="text" placeholder="Enter Mobile" formControlName="mobile" name="uname">
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" formControlName="password" name="psw">
+        
+      <button type="submit" (click)="register()">Register</button>
+    
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <span class="psw" style="float: left;"> <a (click)="redirectToLogin()">Already have an account?</a></span>
+      <span class="psw"> <a href="#">password?</a></span>
+    </div>
+  </div>>
+  
+</div>
+
+
+
